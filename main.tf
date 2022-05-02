@@ -91,6 +91,7 @@ resource "hcloud_load_balancer_target" "load_balancer_target" {
   type              = "label_selector"
   load_balancer_id  = hcloud_load_balancer.devops-load-balancer.id
   label_selector    = "type=${var.master_label}"
+  use_private_ip    = true
 }
 
 
